@@ -13,10 +13,10 @@ import static spark.Spark.get;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
 
-import static javax.measure.unit.SI.KILOGRAM;
+/*import static javax.measure.unit.SI.KILOGRAM;
 import javax.measure.*;
 import org.jscience.physics.model.RelativisticModel;
-import org.jscience.physics.amount.Amount;
+import org.jscience.physics.amount.Amount;*/
 
 public class Main {
 
@@ -24,11 +24,11 @@ public class Main {
 
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
-    get("/hello", (req, res) -> {
+    /*get("/hello", (req, res) -> {
       RelativisticModel.select();
       Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
       return "E=mc^2: 12 GeV = " + m.toString();
-    });
+    });*/
 
     //get("/hello", (req, res) -> "Hello World");
 

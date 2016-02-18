@@ -1,0 +1,39 @@
+/*div*/
+#ME
+{
+	margin:100px 100px 0 0;
+	
+}
+.myprofile
+{
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	background-color:white;
+	opacity:0.8;
+	text-align:center;
+	padding:10px 12px 10px 12px;
+}
+/*div*/
+/*other*/
+#name
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:30px;
+	text-align:center;
+	color:#696969;
+	font-weight:bold;
+}
+#mymotto
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;
+	text-align:left;
+	color:#696969;
+}
+/*other*/
+/*h style*/
+
+/*h style*/
+
+

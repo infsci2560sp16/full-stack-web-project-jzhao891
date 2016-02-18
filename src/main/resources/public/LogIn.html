@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html height="100%">
+<head>
+<title>ALLTOUR-Login/Signup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="stylesheets/mystyle.css" rel="stylesheet">
+<link href="stylesheets/UserCss.css" rel="stylesheet">
+<!--[if lt IE 7]>
+<link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+<![endif]-->
+<style type="text/css">
+</style>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/myjquery.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script charset="utf-8">
+
+</script>
+</head>
+<body>
+<div id="content-head"> 
+      <table><tr>
+      <td class="td-2" align="center"><a href="Index.html"><img src="img/wowtour.jpg" width="120px"></a></td>
+      <td class="td-2"></td>
+      
+      <td class="td-5" valign="bottom" align="right"><nav class="nav-menu">
+          <ul>
+            <li><a title="Destination" href="Index.html">Hello World!</a></li>
+            <li><a title="services" href="Services.html">Services</a></li>
+            <li><a title="news" href="Blogs.html">Blogs</a></li>
+            <li><a title="team" href="UserMag.html">User Management</a></li>
+            <li><a title="contact" href="About.html">About Us</a></li>
+            <li><a title="SignIn" class="li-Sign" href="LogIn.html">LogIn</a></li>
+          </ul>
+        </nav></td></tr>
+        </table>
+</div>
+<div id="wrapper">
+<div id="Login" class="form-login">
+<form> 
+                                <h1>Log in</h1> 
+                                <p> 
+                                    <label for="username"> Your email or username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">Keep me logged in</label>
+								</p>
+                                <p class="login_button"> 
+                                    <input type="submit" value="Login" onclick="logsuccess()"/> 
+								</p>
+                                <p class="change_link">
+									<label>Not a member yet ?</label>
+									<a id="sighup" onclick="tologin()">Join us</a>
+								</p>
+                            </form>
+</div>
+<div id="Signup" class="form-sign">
+<form> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label for="usernamesignup">Your username</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup"> Your email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup">Your password </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm">Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p class="signin_button"> 
+									<input type="submit" value="Sign up" onclick="Signsuccess()"/> 
+								</p>
+                                <p class="change_link">  
+									<label>Already a member ?</label>
+									<a id="login" onclick="tosign()"> Go and log in </a>
+								</p>
+                            </form>
+</div></div>
+</body>
+</html>

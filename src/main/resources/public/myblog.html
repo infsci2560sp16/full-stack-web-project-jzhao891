@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ALLTOUR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="stylesheets/mystyle.css" rel="stylesheet">
+<link href="stylesheets/blogs.css" rel="stylesheet">
+<!--[if lt IE 7]>
+<link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+<![endif]-->
+<style type="text/css">
+</style>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/myjquery.js">
+
+</script>
+
+</head>
+<body style="background-image:url(img/other-bg.jpg);">
+<div class="container-blog">
+<div class="container-head"> 
+      <table><tr>
+      <td class="td-2" align="center"><a href="Index.html"><img src="img/wowtour.jpg" width="120px"></a></td>
+      <td class="td-2"></td>
+      
+      <td class="td-5" valign="bottom" align="right"><nav class="nav-menu">
+          <ul>
+            <li><a title="Destination" href="Index.html">Hello World!</a></li>
+            <li><a title="services" href="Services.html">Services</a></li>
+            <li><a title="news" href="Blogs.html">Blogs</a></li>
+            <li><a title="team" href="UserMag.html">User Management</a></li>
+            <li><a title="contact" href="About.html">About Us</a></li>
+            <li><a title="SignIn" class="li-Sign" href="LogIn.html">LogIn</a></li>
+          </ul>
+        </nav></td></tr>
+        </table>
+</div>
+<div class="content"><table><tr>
+<td class="td-1"></td>
+<td class="td-5">
+<h4 id="blogT" class="blogH4">MY INSIDER’S GUIDE TO BANGKOK ON A BUDGET</h4>
+<h5><span id="posttime">February 11, 2016</span><span>/ By</span><span id="postuser">NomadicMatt</span></h5>
+<p><img src="img/blogs/guidebangkok14.jpg" width="100%"><br>
+It seems that everyone is going to Thailand right now. I have friends thinking about going, friends going, and friends there already. It must be all that snow and cold weather in the Northern hemisphere right now! At the end of last year, I spent a considerable amount of time in the city. It’s one of my favorite cities in the world.</p>
+<p>Bangkok usually leaves travelers unimpressed, given its pollution, traffic, and lack of tourist attractions. I played tour guide to a few friends when I was in the city and, while they enjoyed the food and nightlife, they didn’t think there was much to do. And they’re right — there isn’t much to do here in the traditional tourist sense, and most people can’t wait to get out.</p>
+<p>I used to feel that way until I lived here and saw that Bangkok actually has a lot to offer. It just reveals its secrets slowly to those with the time to explore the hidden gems of this megacity. It requires you to leave the tourist ghettos of Khao San and Silom and find a city full of things to do, places to eat, and bars, clubs, and sites to visit.</p>
+<p><img src="img/blogs/guidebangkok13.jpg" width="100%"><br>" Below are my favorite places to visit and things to see:"</p>
+<p><strong>The Grand Palace</strong>
+<br>
+<em>Hours: 8:30am–3:30pm daily. Price: 400 baht</em>
+<br>
+ This is Thailand’s royal palace. It was built at the end of the 18th century by King Rama I and is the official residence of the current monarch (though he doesn’t actually live there anymore; now it’s just used for ceremonies). It’s a beautiful palace filled with numerous temples, including Wat Pra Kaeo, which houses the 15th-century Emerald Buddha statue, whose robes are rotated three times a year by the king himself.</p>
+</td>
+<td class="td-3">
+<div id="qy" style="width:256px;margin:7px 10px 5px;height:94px;overflow:hidden" onMouseOver="qiScrollAmount=0"
+onmouseout="qiScrollAmount=2">
+<table border='0' cellspacing='0' cellpadding='0' width='256px'>
+          <tr>
+            <td  height='70'><a id="scroll" href="http://www.111cn.net/13335574"><img  src="http://filesimg.111cn.net/2010/03/20100528063928578.jpg" /></a></td>
+          </tr>
+          <tr>
+            <td  height='70'><a id="scroll" href="http://www.111cn.net/13335574"><img  src="http://filesimg.111cn.net/2010/03/20100528063928578.jpg" /></a></td>
+          </tr>
+          
+        </table>
+        <script>
+var qoMarquee = document.getElementById("qy"); //滚动对象
+//var tab1 = document.getElementById("tab1");
+//var tab2 = document.getElementById("tab2");
+var qiLineHeight = 94;//单行高度，像素IE
+var qiLineCount = 0; //实际行数
+var qiScrollAmount = 2; //每次滚动高度，像素（速度）
+var speed1=3000;//每次停留时间
+var speed2=1;//滚动速度
+var num=qoMarquee.getElementsByTagName('img').length;//总数
+var alink=document.getElementsByTagName('a');
+for(var i=0;i<alink.length;i++){
+	alink[i].onfocus=function(){this.blur();}
+}
+function run() {
+	if(qoMarquee.scrollTop==num*qiLineHeight){qoMarquee.scrollTop=0;window.setTimeout( "run()", speed2 );}//重置并接着滚动
+	else{
+		qoMarquee.scrollTop +=qiScrollAmount;
+		if ( qoMarquee.scrollTop % qiLineHeight == 0 ) {window.setTimeout( "run()", speed1 );}//如果满格等待N秒
+		else {window.setTimeout( "run()", speed2 );}//正常滚动
+	}
+}
+function up(){
+		qiScrollAmount = 0;
+		var amount=1;
+		if(qoMarquee.scrollTop==num*qiLineHeight) qoMarquee.scrollTop=0;
+		qoMarquee.scrollTop +=amount;
+		if ( qoMarquee.scrollTop % qiLineHeight == 0 ) {amount=0;window.setTimeout( "qiScrollAmount = 2", speed1 );}
+		else window.setTimeout( up(), 1 );
+}
+function dw(){
+		qiScrollAmount = 0;
+		var amount=1;
+		if(qoMarquee.scrollTop==0) qoMarquee.scrollTop=num*qiLineHeight;
+		qoMarquee.scrollTop -=amount;
+		if ( qoMarquee.scrollTop % qiLineHeight == 0 ) {amount=0;window.setTimeout( "qiScrollAmount = 2", speed1 );}
+		else window.setTimeout( dw(), 1 );
+}
+window.setTimeout( "run()", speed1 );
+</script>
+        </div>
+</td>
+</tr>
+<tr><td><br></td></tr>
+<tr>
+<br><td class="td-1"></td><td class="td-5" style="text-align:center;"><a id="return" href="Blogs.html">RETURN</a></td><td class="td-3"></td></tr>
+</table></div>
+</div>
+
+</body>
+</html>

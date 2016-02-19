@@ -1,7 +1,7 @@
 /*div*/
 .container-blog
 {
-	
+
 	height:100%;
 	width:100%;
 	position:absolute;
@@ -17,8 +17,8 @@
 	opacity:0.95;
 }
 .content
-{	
-	
+{
+
 	display:block;
 	margin:100px 60px 80px 60px;
 	background-color:white;
@@ -96,5 +96,14 @@ h3.title
     color:black;
 }
 /*h style*/
-
-
+.blog_img
+{
+		width:100%;
+}
+.scrolltable
+{
+		border:'0';
+		cellspacing:'0';
+		cellpadding:'0';
+		width:'256px';
+}

@@ -40,10 +40,26 @@
             <li><a title="team" href="UserMag.html">User Management</a></li>
             <li><a title="contact" href="About.html">About Us</a></li>
             <li><a title="SignIn" class="li-Sign" href="LogIn.html">LogIn</a></li>
-                    		<li class="time"><img src="img/afternoon.png" alt="afternoon" width="45"><li>
-          <li class="timetext">Mar</li>
-          <li class="timetext">/30</li>
-          <li class="timetext">/2016</li>
+          <#list date as detail>
+          <#if detail_index==3>
+          	<#if detail=="morning">
+          		<li class="time"><img src="img/morning.png" alt="morning" width="45"><li>
+          	<#elseif detail=="afternoon">
+          		<li class="time"><img src="img/afternoon.png" alt="afternoon" width="45"><li>
+          	<#else>
+          		<li class="time"><img src="img/nignt.png" alt="nignt" width="45"><li>
+          	</#if>
+          </#if>
+          </#list> 
+          <#list date as detail>
+          <#if detail_index==1>
+          <li class="timetext">${detail}</li>
+          <#elseif detail_index==2>
+          <li class="timetext">/${detail}</li>
+          <#elseif detail_index==5>
+          <li class="timetext">/${detail}</li>
+          </#if>
+          </#list>
             
          
            

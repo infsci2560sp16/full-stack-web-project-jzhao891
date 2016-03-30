@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    #attempts_paginate span {font-weight:normal}
+    #attempts .progress {width:8em}
+    #attempts_processing {top:-1.5em; font-size:1em;
+      color:#000; background:rgba(255, 255, 255, 0.8)}
+    #attempts .queue {width:6em}
+    #attempts .ui {width:8em}
+  </style>
+  <style type="text/css">
+    #ResourceRequests_paginate span {font-weight:normal}
+    #ResourceRequests .progress {width:8em}
+    #ResourceRequests_processing {top:-1.5em; font-size:1em;
+      color:#000; background:rgba(255, 255, 255, 0.8)}
+  </style>
+  <title>
+    Application application_1457221227957_0009
+  </title>
+  <link rel="stylesheet" href="/static/yarn.css">
+  <style type="text/css">
+    #layout { height: 100%; }
+    #layout thead td { height: 3em; }
+    #layout #navcell { width: 11em; padding: 0 1em; }
+    #layout td.content { padding-top: 0 }
+    #layout tbody { vertical-align: top; }
+    #layout tfoot td { height: 4em; }
+  </style>
+  <link rel="stylesheet" href="/static/jquery/themes-1.9.1/base/jquery-ui.css">
+  <link rel="stylesheet" href="/static/dt-1.9.4/css/jui-dt.css">
+  <script type="text/javascript" src="/static/jquery/jquery-1.8.2.min.js">
+  </script>
+  <script type="text/javascript" src="/static/jquery/jquery-ui-1.9.1.custom.min.js">
+  </script>
+  <script type="text/javascript" src="/static/dt-1.9.4/js/jquery.dataTables.min.js">
+  </script>
+  <script type="text/javascript" src="/static/yarn.dt.plugins.js">
+  </script>
+  <style type="text/css">
+    #jsnotice { padding: 0.2em; text-align: center; }
+    .ui-progressbar { height: 1em; min-width: 5em }
+  </style>
+  <script type="text/javascript">
+    $(function() {
+      $('#nav').accordion({autoHeight:false, active:0});
+    attemptsDataTable =  $('#attempts').dataTable({bStateSave : true, "fnStateSave": function (oSettings, oData) {  data = oData.aoSearchCols;for(i =0 ; i < data.length; i ++) {data[i].sSearch = ""} sessionStorage.setItem( oSettings.sTableId, JSON.stringify(oData) ); }, "fnStateLoad": function (oSettings) { return JSON.parse( sessionStorage.getItem(oSettings.sTableId) );}, bJQueryUI:true, sPaginationType: 'full_numbers', iDisplayLength:20, aLengthMenu:[20, 40, 60, 80, 100], 'aaData': attemptsTableData, bDeferRender: true, bProcessing: true
+, aoColumnDefs: [
+{'sType':'string', 'aTargets': [0], 'mRender': parseHadoopID }
+, {'sType':'numeric', 'aTargets': [1], 'mRender': renderHadoopDate }], aaSorting: [[0, 'desc']]}).fnSetFilteringDelay(188);
+    ResourceRequestsDataTable =  $('#ResourceRequests').dataTable({bStateSave : true, "fnStateSave": function (oSettings, oData) {  data = oData.aoSearchCols;for(i =0 ; i < data.length; i ++) {data[i].sSearch = ""} sessionStorage.setItem( oSettings.sTableId, JSON.stringify(oData) ); }, "fnStateLoad": function (oSettings) { return JSON.parse( sessionStorage.getItem(oSettings.sTableId) );}, bJQueryUI: true, sPaginationType: 'full_numbers'}).fnSetFilteringDelay(188);
+    });
+  </script>
+  <div id="jsnotice" class="ui-state-error">
+    This page will not function without javascript enabled. Please enable javascript on your browser.
+  </div>
+  <script type="text/javascript">
+    $('#jsnotice').hide();
+  </script>
+  <table id="layout" class="ui-widget-content">
+    <thead>
+      <tr>
+        <td colspan="2">
+          <div id="header" class="ui-widget">
+            <div id="user">
+              Logged in as: dr.who
+            </div>
+            <div id="logo">
+              <img src="/static/hadoop-st.png">
+            </div>
+            <h1>
+              Application application_1457221227957_0009
+            </h1>
+          </div>
+        </td>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="2">
+          <div id="footer" class="ui-widget">
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td id="navcell">
+          <div id="nav">
+            <h3>
+              Cluster
+            </h3>
+            <ul>
+              <li>
+                <a href="/cluster/cluster">About</a>
+              <li>
+                <a href="/cluster/nodes">Nodes</a>
+              <li>
+                <a href="/cluster/nodelabels">Node Labels</a>
+              <li>
+                <a href="/cluster/apps">Applications</a>
+                <ul>
+                  <li>
+                  <li>
+                    <a href="/cluster/apps/NEW">NEW</a>
+                  <li>
+                    <a href="/cluster/apps/NEW_SAVING">NEW_SAVING</a>
+                  <li>
+                    <a href="/cluster/apps/SUBMITTED">SUBMITTED</a>
+                  <li>
+                    <a href="/cluster/apps/ACCEPTED">ACCEPTED</a>
+                  <li>
+                    <a href="/cluster/apps/RUNNING">RUNNING</a>
+                  <li>
+                    <a href="/cluster/apps/FINISHED">FINISHED</a>
+                  <li>
+                    <a href="/cluster/apps/FAILED">FAILED</a>
+                  <li>
+                    <a href="/cluster/apps/KILLED">KILLED</a>
+                </ul>
+              <li>
+                <a href="/cluster/scheduler">Scheduler</a>
+            </ul>
+            <h3>
+              Tools
+            </h3>
+            <ul>
+              <li>
+                <a href="/conf">Configuration</a>
+              <li>
+                <a href="/logs">Local logs</a>
+              <li>
+                <a href="/stacks">Server stacks</a>
+              <li>
+                <a href="/jmx?qry=Hadoop:*">Server metrics</a>
+            </ul>
+          </div>
+        </td>
+        <td class="content">
+          <div>
+            <button onclick="confirmAction()"><b>Kill Application</b></button>
+          </div>
+          <script type="text/javascript">
+            function confirmAction() { b = confirm("Are you sure?"); if (b == true) { $.ajax({ type: 'PUT', url: '/ws/v1/cluster/apps/application_1457221227957_0009/state', contentType: 'application/json', data: '{"state":"KILLED"}', dataType: 'json' }).done(function(data){ setTimeout(function(){ location.href = '/cluster/app/application_1457221227957_0009'; }, 1000); }).fail(function(data){ console.log(data); }); }}
+          </script>
+          <div class="info-wrap ui-widget-content ui-corner-bottom">
+            <table class="info">
+              <tr>
+                <th class="ui-state-default" colspan="2">
+                  Application Overview
+                </th>
+              </tr>
+              <tr class="odd">
+                <th>
+                  User:
+                </th>
+                <td>
+                  hadoop
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Name:
+                </th>
+                <td>
+                  WeightCount
+                </td>
+              </tr>
+              <tr class="odd">
+                <th>
+                  Application Type:
+                </th>
+                <td>
+                  SPARK
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Application Tags:
+                </th>
+                <td>
+
+                </td>
+              </tr>
+              <tr class="odd">
+                <th>
+                  YarnApplicationState:
+                </th>
+                <td>
+                  FAILED
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  FinalStatus Reported by AM:
+                </th>
+                <td>
+                  FAILED
+                </td>
+              </tr>
+              <tr class="odd">
+                <th>
+                  Started:
+                </th>
+                <td>
+                  Sun Mar 06 00:19:08 -0500 2016
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Elapsed:
+                </th>
+                <td>
+                  36sec
+                </td>
+              </tr>
+              <tr class="odd">
+                <th>
+                  Tracking URL:
+                </th>
+                <td>
+                  <a href="http://master:8088/cluster/app/application_1457221227957_0009">History</a>
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Diagnostics:
+                </th>
+                <td>
+                  <div>
+                    Application application_1457221227957_0009 failed 2 times due to AM Container for appattempt_1457221227957_0009_000002 exited with  exitCode: 15
+                  </div>
+                  <div>
+                    For more detailed output, check application tracking page:http://master:8088/cluster/app/application_1457221227957_0009Then, click on links to logs of each attempt.
+                  </div>
+                  <div>
+                    Diagnostics: Exception from container-launch.
+                  </div>
+                  <div>
+                    Container id: container_1457221227957_0009_02_000001
+                  </div>
+                  <div>
+                    Exit code: 15
+                  </div>
+                  <div>
+                    Stack trace: ExitCodeException exitCode=15:
+                  </div>
+                  <div>
+                    	at org.apache.hadoop.util.Shell.runCommand(Shell.java:545)
+                  </div>
+                  <div>
+                    	at org.apache.hadoop.util.Shell.run(Shell.java:456)
+                  </div>
+                  <div>
+                    	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:722)
+                  </div>
+                  <div>
+                    	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:211)
+                  </div>
+                  <div>
+                    	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:302)
+                  </div>
+                  <div>
+                    	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:82)
+                  </div>
+                  <div>
+                    	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+                  </div>
+                  <div>
+                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+                  </div>
+                  <div>
+                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+                  </div>
+                  <div>
+                    	at java.lang.Thread.run(Thread.java:745)
+                  </div>
+                  <div>
+
+                  </div>
+                  <div>
+
+                  </div>
+                  <div>
+                    Container exited with a non-zero exit code 15
+                  </div>
+                  <div>
+                    Failing this attempt. Failing the application.
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="info-wrap ui-widget-content ui-corner-bottom">
+          </div>
+          <div class="info-wrap ui-widget-content ui-corner-bottom">
+            <table class="info">
+              <tr>
+                <th class="ui-state-default" colspan="2">
+                  Application Metrics
+                </th>
+              </tr>
+              <tr class="odd">
+                <th>
+                  Total Resource Preempted:
+                </th>
+                <td>
+                  &lt;memory:0, vCores:0&gt;
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Total Number of Non-AM Containers Preempted:
+                </th>
+                <td>
+                  0
+                </td>
+              </tr>
+              <tr class="odd">
+                <th>
+                  Total Number of AM Containers Preempted:
+                </th>
+                <td>
+                  0
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Resource Preempted from Current Attempt:
+                </th>
+                <td>
+                  &lt;memory:0, vCores:0&gt;
+                </td>
+              </tr>
+              <tr class="odd">
+                <th>
+                  Number of Non-AM Containers Preempted from Current Attempt:
+                </th>
+                <td>
+                  0
+                </td>
+              </tr>
+              <tr class="even">
+                <th>
+                  Aggregate Resource Allocation:
+                </th>
+                <td>
+                  73870 MB-seconds, 36 vcore-seconds
+                </td>
+              </tr>
+            </table>
+          </div>
+          <table id="attempts">
+            <thead>
+              <tr>
+                <th class="id">
+                  Attempt ID
+                </th>
+                <th class="started">
+                  Started
+                </th>
+                <th class="node">
+                  Node
+                </th>
+                <th class="logs">
+                  Logs
+                </th>
+              </tr>
+            </thead>
+            <script type="text/javascript">
+              var attemptsTableData=[
+["<a href='/cluster/appattempt/appattempt_1457221227957_0009_000001'>appattempt_1457221227957_0009_000001</a>","1457241548260","<a href='http://master:8042'>http:\/\/master:8042</a>","<a href='//master:8042/node/containerlogs/container_1457221227957_0009_01_000001/hadoop'>Logs</a>"],
+["<a href='/cluster/appattempt/appattempt_1457221227957_0009_000002'>appattempt_1457221227957_0009_000002</a>","1457241567763","<a href='http://slave2:8042'>http:\/\/slave2:8042</a>","<a href='//slave2:8042/node/containerlogs/container_1457221227957_0009_02_000001/hadoop'>Logs</a>"]
+]
+            </script>
+            <tbody>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</html>

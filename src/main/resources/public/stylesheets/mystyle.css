@@ -29,6 +29,32 @@ ul
     padding: 0;
     overflow: hidden;
 }
+li.time
+{
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-right:10px;
+	padding-left:15px;
+	text-decoration:none;
+	font-family: 'Patua One';
+	font-size: 17px;
+	font-weight:bold;
+	color: black;
+	text-align: center;
+}
+li.timetext
+{
+	padding-top:10px;
+	padding-bottom:5px;
+	padding-right:0px;
+	padding-left:0px;
+	text-decoration:none;
+	font-family: 'Patua One';
+	font-size: 17px;
+	font-weight:bold;
+	color: black;
+	text-align: center;
+}
 
 li
 {

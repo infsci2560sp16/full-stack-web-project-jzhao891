@@ -14,7 +14,11 @@
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <![endif]-->
+
+
+<script src="http://ajaxtoolbox.com/request/full/AjaxRequest.js"></script>
 <script src="js/myjquery.js"></script>
+<script src="js/login.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 
@@ -25,16 +29,15 @@
       <table><tr>
         <td class="td-2" style="text-align:center;"><a href="Index.html"><img src="img/wowtour.jpg" alt="wowtour" width="120"></a>
         </td>
-        <td class="td-2"></td>
+        <td class="td-3"></td>
 
-        <td class="td-5" style="vertical-align:bottom; text-align:right;"><nav class="nav-menu">
+        <td class="td-4" style="vertical-align:bottom; text-align:right;"><nav class="nav-menu">
           <ul>
             <li><a title="Destination" href="Index.html">Hello World!</a></li>
             <li><a title="services" href="Services.html">Services</a></li>
             <li><a title="news" href="Blogs.html">Blogs</a></li>
             <li><a title="team" href="UserMag.html">User Management</a></li>
             <li><a title="contact" href="About.html">About Us</a></li>
-            <li><a title="SignIn" class="li-Sign" href="LogIn.html">LogIn</a></li>
           </ul>
         </nav></td></tr>
         </table>
@@ -56,7 +59,7 @@
 									<label for="loginkeeping">Keep me logged in</label>
 								</p>
                                 <p class="login_button">
-                                    <input type="submit" value="Login" onclick="logsuccess()"/>
+                                    <input type="submit" value="Login" onclick="signin()"/>
 								</p>
                                 <p class="change_link">
 									<label>Not a member yet ?</label>
@@ -84,7 +87,7 @@
                                     <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                 </p>
                                 <p class="signin_button">
-									<input type="submit" value="Sign up" onclick="Signsuccess()"/>
+									<input type="submit" value="Sign up" onclick="signup()"/>
 								</p>
                                 <p class="change_link">
 									<label>Already a member ?</label>

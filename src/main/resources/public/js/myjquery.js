@@ -11,10 +11,7 @@ function tosign(){
 	}
 
 
-function logsuccess(){
-	 window.location.replace( "Index.html" );
-	 //change the login to "Hello, username!"
-}
+
 function Signsuccess(){
 	//notice user sign up success!
 	 alert("Sign up Success!");

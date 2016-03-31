@@ -1,4 +1,5 @@
 {
+  "users":{
    "user1" : {
       "name" : "Jessie",
 	  "password" : "password1",
@@ -16,5 +17,6 @@
 	  "password" : "password3",
 	  "email" : "ZEZ7@pitt.edu",
 	  "id": 3
+   }
    }
 }

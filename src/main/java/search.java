@@ -13,7 +13,7 @@ public class search {
 	}
 	public void letgo(){
 		
-		post("/letgo",(req,res)->{
+		get("/letgo",(req,res)->{
 
 			
 			Map<String,Object> destination=new HashMap<>();

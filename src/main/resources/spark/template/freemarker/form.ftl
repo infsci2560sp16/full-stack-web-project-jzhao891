@@ -8,15 +8,15 @@
 <!--[if lt IE 7]>
 <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
 <![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <style type="text/css">
 </style>
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <![endif]-->
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="js/search.js"></script>
 </head>
 <body style="background-image:url(img/top-bg.jpg);">
@@ -46,7 +46,7 @@
           		<li class="time"><img src="img/nignt.png" alt="nignt" width="45"><li>
           	</#if>
           </#if>
-          </#list> 
+          </#list>
           <#list date as detail>
           <#if detail_index==1>
           <li class="timetext">${detail}</li>
@@ -56,9 +56,9 @@
           <li class="timetext">/${detail}</li>
           </#if>
           </#list>
-            
-         
-           
+
+
+
           </ul>
         </nav></td></tr>
         </table>

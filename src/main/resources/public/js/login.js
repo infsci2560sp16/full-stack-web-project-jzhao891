@@ -15,7 +15,7 @@ function signup(){
     "email":email,
     "password":password,
     "id":uniqueId()
-  }
+  };
   /*var maxcount=0;//used to assign the value of id
 
   var getlistreq=new AjaxRequest();

@@ -56,7 +56,7 @@ function signup(){
   $.post("/signup",newuser,function(data){
     //console.log(data);
     alert("Sign up successfully!");
-    window.location.href="Index.html" ;
+    window.location.href="/Index" ;
   });
 
 }
@@ -68,6 +68,6 @@ function signin(){
     console.log(data);
     var e=data;//
     alert(e+":login in successfully!");
-    window.location.href="Index.html" ;
+    window.location.href="/Index" ;
   });
 }

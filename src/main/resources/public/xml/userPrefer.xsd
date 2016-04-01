@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="userPrefer">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string"/>
+      <xs:element name="sex" type="xs:string"/>
+      <xs:element name="age" type="xs:Int"/>
+      <xs:element name="country" type="xs:string"/>
+      <xs:element name="preferDIY" type="xs:Boolean"/>
+      <xs:element name="DriveOrnot" type="xs:string"/>
+      <xs:element name="latestCountry" type="xs:string"/>
+      <xs:element name="latestDestination" type="xs:string"/>
+      <xs:element name="style" type="xs:string"/>
+      <xs:element name="dateOFnexttrip" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

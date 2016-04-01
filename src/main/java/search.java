@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.google.gson.Gson;
+import org.json.JSONObject;
 
 public class search {
 	Gson gson=new Gson();
@@ -12,10 +13,10 @@ public class search {
 		letgo();
 	}
 	public void letgo(){
-		
+
 		get("/letgo",(req,res)->{
 
-			
+
 			Map<String,Object> destination=new HashMap<>();
 			destination.put("destination",req.queryParams("destination"));
 			destination.put("contry", "China");
@@ -45,6 +46,6 @@ public class search {
 			System.out.println("search well");
 			return xml;
 		});
-		
+
 	}
 }

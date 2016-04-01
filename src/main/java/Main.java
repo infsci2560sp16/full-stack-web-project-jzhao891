@@ -24,7 +24,7 @@ public class Main {
   public static void main(String[] args) throws IOException {
 	  
 	  
-    //port(Integer.valueOf(System.getenv("PORT")));
+    port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
     //SayHi r=new SayHi();

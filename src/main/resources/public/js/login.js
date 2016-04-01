@@ -5,7 +5,7 @@ function logsuccess(name){
 }
 function uniqueId() {
   return 'id-' + Math.random().toString(36).substr(2, 16);
-};
+}
 function signup(){
   var name=document.getElementById("usernamesignup").value;
   var email=document.getElementById("emailsignup").value;
@@ -15,7 +15,7 @@ function signup(){
     "email":email,
     "password":password,
     "id":uniqueId()
-  };
+  }
   /*var maxcount=0;//used to assign the value of id
 
   var getlistreq=new AjaxRequest();

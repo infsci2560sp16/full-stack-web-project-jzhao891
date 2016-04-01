@@ -17,6 +17,7 @@
 
 
 <script src="http://ajaxtoolbox.com/request/full/AjaxRequest.js"></script>
+<script src="http://sinonjs.org/releases/sinon-1.17.3.js"></script>
 <script src="js/myjquery.js"></script>
 <script src="js/login.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -33,7 +34,7 @@
 
         <td class="td-4" style="vertical-align:bottom; text-align:right;"><nav class="nav-menu">
           <ul>
-            <li><a title="Destination" href="Index.html">Hello World!</a></li>
+            <li><a title="Destination" href="/Index">Hello World!</a></li>
             <li><a title="services" href="Services.html">Services</a></li>
             <li><a title="news" href="Blogs.html">Blogs</a></li>
             <li><a title="team" href="UserMag.html">User Management</a></li>
@@ -47,8 +48,8 @@
 <form>
                                 <h1>Log in</h1>
                                 <p>
-                                    <label for="username"> Your email or username </label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                    <label for="email"> Your email</label>
+                                    <input id="email" name="email" required="required" type="text" placeholder="mymail@mail.com"/>
                                 </p>
                                 <p>
                                     <label for="password"> Your password </label>

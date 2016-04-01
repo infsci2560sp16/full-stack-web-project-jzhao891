@@ -16,12 +16,8 @@
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <![endif]-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
-<script src="js/jquery.localscroll-1.2.7-min.js"></script>
-<script>
-
-</script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/search.js"></script>
 </head>
 <body style="background-image:url(img/top-bg.jpg);">
 <div class="container">
@@ -77,7 +73,7 @@
   <div class="row">
         <div class="center">
           <h2>Search your destination</h2>
-          <input type="text" name="your-destination" placeholder="New York" class="c-text" size="50" title="your destination">
+          <input type="text" id="destination" name="your-destination" placeholder="New York" class="c-text" size="50" title="your destination">
           <input type="submit" value="Let's Go" class="c-submit" onClick="bt_submit_onclick()">
         </div>
       </div>
@@ -89,8 +85,6 @@
 
 </div>
 </div>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/site.js"></script>
+
 </body>
 </html>

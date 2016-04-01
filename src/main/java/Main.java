@@ -30,6 +30,8 @@ public class Main {
     //SayHi r=new SayHi();
     
     GetDate d=new GetDate();
+    login log=new login();
+    search s=new search();
     get("/db", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();

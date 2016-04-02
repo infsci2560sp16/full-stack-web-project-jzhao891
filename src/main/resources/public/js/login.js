@@ -55,7 +55,7 @@ function signup(){
   addreq.send('"user'+newuser.id+'":{'+JSON.stringify(newuser)+"}");*/
   $.post("/signup",newuser,function(data){
     //console.log(data);
-    alert("Sign up successfully!");
+    window.alert("Sign up successfully!");
     window.location.href="/Index" ;
   });
 
@@ -67,7 +67,7 @@ function signin(){
 	var d=JSON.parse(data);
     console.log(data);
     var e=data;//
-    alert(e+":login in successfully!");
+    window.alert(e+":login in successfully!");
     window.location.href="/Index" ;
   });
 }
